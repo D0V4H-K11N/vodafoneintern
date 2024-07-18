@@ -18,7 +18,7 @@ public class ProductApiService {
     }
 
     public List<Document> findName(String name) {
-        Query query = new Query(Criteria.where("name").is(name);
+        Query query = new Query(Criteria.where("name").is(name));
         if(mongoTemplate.find(query, Document.class, "products") == null) {
             throw new RuntimeException("Product does not exist");
         }
